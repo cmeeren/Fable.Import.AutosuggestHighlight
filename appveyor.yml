@@ -1,0 +1,19 @@
+version: 1.0.{build}
+
+image: Visual Studio 2017
+
+build:
+  verbosity: detailed
+
+artifacts:
+  - path: '**\Release\*.nupkg'
+
+build_script:
+  - cmd: dotnet build -c Release src
+
+deploy:
+  - provider: NuGet
+    api_key:
+      secure: j4f+1NKevE0Pq8HpzZs/DzpAmx8EqUj+/lMWJhI42gqSnGCZZGJvHFl+/d0AD3sw
+    on:
+      appveyor_repo_tag: true
