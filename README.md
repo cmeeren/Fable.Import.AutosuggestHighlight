@@ -51,6 +51,6 @@ Changelog
 
 1. Make necessary changes to the code
 2. Update the changelog
-3. Update the version and release notes in the package info
+3. Update the version and release notes in the package info, as well as the message stating which `autosuggest-highlight` version the bindings created for.
 4. Commit and tag the commit (this is what triggers deployment from  AppVeyor). For consistency, the tag should ideally be in the format `v1.2.3`.
 5. Push the changes and the tag to the repo. If AppVeyor build succeeds, the package is automatically published to NuGet.
