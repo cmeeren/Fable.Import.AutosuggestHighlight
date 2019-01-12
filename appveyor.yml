@@ -9,7 +9,7 @@ artifacts:
   - path: '**\Release\*.nupkg'
 
 build_script:
-  - cmd: dotnet build -c Release src
+  - cmd: dotnet build -c Release
 
 deploy:
   - provider: NuGet
