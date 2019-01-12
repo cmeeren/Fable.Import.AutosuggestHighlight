@@ -4,7 +4,7 @@ This package provides Fable bindings for [autosuggest-highlight](https://github.
 
 ## Installation
 
-* Install the `autosuggest-highlight` npm package`:
+* Install the `autosuggest-highlight` npm package:
   * using npm: `npm install autosuggest-highlight`
   * using yarn: `yarn add autosuggest-highlight`
 
@@ -17,7 +17,7 @@ This package provides Fable bindings for [autosuggest-highlight](https://github.
 The easiest way is to use the convenience function `getParts`:
 
 ```f#
-getParts : (query: string) -> (text: string) -> (string * bool)
+getParts : (query: string) -> (text: string) -> (string * bool) list
 ```
 
 This function returns consecutive parts of `text` with a boolean indicating whether the part should be highlighted. How you then use and render this data is entirely up to you.
@@ -35,8 +35,7 @@ let view =
   div [ ] [
     "Hello, world!"
     |> AutosuggestHighlight.getParts "wo"
-    |> List.map (fun (s, hl) ->
-        span [ if hl then yield Class "highlighted" ] [ str s ] )
+    |> List.map (fun (s, hl) -> span [ if hl then yield Class "highlighted" ] [ str s ] )
     |> fragment []
   ]
 ```
