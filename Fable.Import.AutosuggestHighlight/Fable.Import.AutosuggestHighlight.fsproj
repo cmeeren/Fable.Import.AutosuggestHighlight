@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -9,16 +9,12 @@
     <Authors>Christer van der Meeren</Authors>
     <PackageLicenseUrl>https://github.com/cmeeren/Fable.Import.AutosuggestHighlight/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>f# fable bindings</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated for Fable.Core 3. No API changes.</PackageReleaseNotes>
+    <Version>1.1.0</Version>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="Bindings.fs" />
     <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Fable.Core" Version="2.0.3" />
-  </ItemGroup>
-
+  <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

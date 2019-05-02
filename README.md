@@ -43,6 +43,10 @@ let view =
 Changelog
 ---------
 
+#### 1.1.0 (2019-05-02)
+
+- Updated for Fable.Core 3. No API changes.
+
 #### 1.0.0 (2019-01-12)
 
 * Initial release
