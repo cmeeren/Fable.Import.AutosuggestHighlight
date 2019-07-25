@@ -3,18 +3,23 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Fable bindings for autosuggest-highlight 3.1.</Description>
+    <Description>Fable bindings for autosuggest-highlight.</Description>
     <PackageProjectUrl>https://github.com/cmeeren/Fable.Import.AutosuggestHighlight</PackageProjectUrl>
     <PackageId>Fable.Import.AutosuggestHighlight</PackageId>
     <Authors>Christer van der Meeren</Authors>
     <PackageLicenseUrl>https://github.com/cmeeren/Fable.Import.AutosuggestHighlight/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>f# fable bindings</PackageTags>
-    <PackageReleaseNotes>Updated for Fable.Core 3. No API changes.</PackageReleaseNotes>
-    <Version>1.1.0</Version>
+    <PackageReleaseNotes>Added femto support</PackageReleaseNotes>
+    <Version>1.1.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Bindings.fs" />
     <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
   </ItemGroup>
+  <PropertyGroup>
+    <NpmDependencies>
+      <NpmPackage Name="autosuggest-highlight" Version="gte 3.1 lt 4" ResolutionStrategy="max" />
+    </NpmDependencies>
+  </PropertyGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
